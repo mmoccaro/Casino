@@ -1,2 +1,37 @@
-<project name="DiceGame" basedir="." default="all">
+<!--
+#  File: build.xml
+#  Type: ANT build file
+#  Date: February 2, 2017
+#
+#  Description:
+#  This is an ANT build file to create the dice game.
+-->
+<project name="DiceGame" basedir="." default="compile">
+	
+    <!--Clean-->
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <!--Compile-->
+    <target name="compile">
+        <mkdir dir="build"/>
+        <javac srcdir="src" destdir="build"/>
+    </target>
+
+    <!--Create JAR-->
+    <target name="jar">
+        <mkdir dir="build"/>
+        <jar destfile="build/DiceGame.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="dicegame.DiceGameMain"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <!--Run-->
+    <target name="run">
+        <java jar="build/DiceGame.jar" fork="true"/>
+    </target>
+
 </project>
