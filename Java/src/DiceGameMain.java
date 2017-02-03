@@ -1,5 +1,14 @@
 package dicegame;
 
+/*
+#  File: DiceGameMain.java
+#  Type: Java Source File
+#  Date: February 2, 2017
+#
+#  Description:
+#  This is the main class for the Java version of the dice game.
+*/
+
 //Imports
 import java.io.*;
 import javax.swing.*;
@@ -22,7 +31,7 @@ class DiceGameMain extends JFrame
 		setResizable(false);
 
 		//Set Icon Image
-		ImageIcon img = new ImageIcon("./Dice_6.png");
+		ImageIcon img = new ImageIcon("./img/Dice_6.png");
 		setIconImage(img.getImage());
 
 		//Add picture to main panel
@@ -32,7 +41,7 @@ class DiceGameMain extends JFrame
 
 		BufferedImage bimg = null;
 		try {
-   			bimg = ImageIO.read(new File("./Dice_6.png"));
+   			bimg = ImageIO.read(new File("./img/Dice_6.png"));
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
