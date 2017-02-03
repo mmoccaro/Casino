@@ -19,12 +19,14 @@ import javax.imageio.ImageIO;
 //Dice Game
 class DiceGameMain extends JFrame
 {
+ private static final long serialVersionUID = 9483247;
+
 	//Constructor
 	public DiceGameMain()
 	{
 		//Set window properties
 		setTitle("Dice Game");
-		setSize(300,300);
+		setSize(600,300);
 		setLocation(50,50);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
@@ -49,6 +51,14 @@ class DiceGameMain extends JFrame
 		ImageIcon imageIcon = new ImageIcon(dimg);
 		label.setIcon(imageIcon);
 		add(label);
+
+		//Add Games Drop Down Box
+		String[] gamesList = { "Select a Game...", "Dice Roll", "TBD" };
+		JComboBox<String> gameListBox = new JComboBox<>(gamesList);
+		gameListBox.setSelectedIndex(0);
+		gameListBox.setSize(150,30);
+		gameListBox.setLocation(440, 10);
+		add(gameListBox);
 	}
 
 	//Main
