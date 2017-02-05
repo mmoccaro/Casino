@@ -1,12 +1,12 @@
-package dicegame;
+package casino;
 
 /*
-#  File: DiceGameMain.java
+#  File: CasinoMain.java
 #  Type: Java Source File
 #  Date: February 2, 2017
 #
 #  Description:
-#  This is the main class for the Java version of the dice game.
+#  This is the main class for the Casino.
 */
 
 //Imports
@@ -17,15 +17,15 @@ import java.awt.Image;
 import javax.imageio.ImageIO;
 
 //Dice Game
-class DiceGameMain extends JFrame
+class CasinoMain extends JFrame
 {
  private static final long serialVersionUID = 9483247;
 
 	//Constructor
-	public DiceGameMain()
+	public CasinoMain()
 	{
 		//Set window properties
-		setTitle("Dice Game");
+		setTitle("Casino");
 		setSize(600,300);
 		setLocation(50,50);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -65,7 +65,7 @@ class DiceGameMain extends JFrame
 	public static void main(String[] args)
 	{
 		//Create a new initial window and set the attributes
-		DiceGameMain dgm = new DiceGameMain(); 
+		CasinoMain dgm = new CasinoMain(); 
 		dgm.setVisible(true);
 	}
 }
