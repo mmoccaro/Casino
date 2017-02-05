@@ -1,2 +1,2 @@
-# Dice_Game
-A dice game written in several different languages.
+# Casino
+A casino system written in Java.
